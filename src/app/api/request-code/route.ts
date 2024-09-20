@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import path from 'path';
 
 export async function POST(request: Request) {
     const { email } = await request.json();
@@ -37,7 +36,7 @@ export async function POST(request: Request) {
 
                 <!-- Cabecera con logo/banner -->
                 <div style="color: white; text-align: center;">
-                    <img src="cid:logo@chiguistudio" alt="CubySoft Logo" style="width: 100%; height: auto; border-radius: 0;" draggable="false">
+                    <img src="https://owellandry.github.io/login-cubysoft/assets/BannerUp.png" alt="CubySoft Logo" style="width: 100%; height: auto; border-radius: 0;" draggable="false">
                 </div>
                 
                 <!-- Contenido principal -->
@@ -60,13 +59,6 @@ export async function POST(request: Request) {
             </div>
         </body>
         `,
-        attachments: [
-            {
-                filename: 'BannerUp.png',
-                path: path.resolve('assets/BannerUp.png'),
-                cid: 'logo@chiguistudio',
-            }
-        ],
     };
 
     try {
