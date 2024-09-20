@@ -5,7 +5,6 @@ import LoginForm from "@/components/LoginForm";
 import VerificationForm from "@/components/VerificationForm";
 import FloatingDocButton from "@/components/FloatingDocButton";
 import Notification from "@/components/Notification";
-import { MdSend } from "react-icons/md";
 
 export default function Home() {
   const [email, setEmail] = useState("");
